@@ -1,0 +1,23 @@
+@import "../../scss/colors.scss";
+
+.commentDiv{
+    h3{
+        color: $Blue-green;
+        font-weight: bold;
+    }
+    h4{
+        border-top: 1px solid $Blue-green;
+        max-width: 900px;
+        padding-top: 10px;
+    }
+    margin-top: 20px;
+    &__text{
+        max-width: 900px;
+        text-align: justify;
+        text-justify: auto;
+        padding-bottom: 10px;
+        
+    }
+
+}
+

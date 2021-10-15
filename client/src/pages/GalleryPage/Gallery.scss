@@ -1,0 +1,26 @@
+@import "../../scss/colors.scss";
+@import '../../scss/mediaQueries.scss';
+
+    .galleryContainer{
+        margin: 20px;
+        display: block;
+        .ReactGridGallery_tile{
+            max-width: 160px;
+        }
+    }
+
+    @include tablet{
+        .galleryContainer{
+            margin-inline: 50px;
+            .ReactGridGallery_tile{
+                max-width: 600px;
+            }
+        }
+    }
+    @include desktop{
+        .galleryContainer{
+            margin-left: 200px;
+            margin-right: 200px;
+
+        }
+    }

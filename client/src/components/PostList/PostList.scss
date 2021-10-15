@@ -1,0 +1,34 @@
+@import "../../scss/colors.scss";
+@import "../../scss/mediaQueries.scss";
+
+  .card-columns{
+         img {
+          opacity: 0.9;
+        }
+        .card{
+          color: $Dark-purple;
+          overflow: hidden;
+          border: none;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+        }
+        .card-title{
+          color: $Dark-purple;
+        }
+        .card-text{
+          color: $Dark-purple;
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+        .text-muted{
+          color: $Dark-purple;
+        }
+        .bottom{
+          position: absolute;
+          background-color: $Floral-white;
+          opacity: 0.75;
+          bottom: 10px;
+          width: 100%;
+          border-radius: 5px;
+          padding: 5px;
+        }
+  }

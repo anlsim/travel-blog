@@ -1,0 +1,39 @@
+@import "../../scss/colors.scss";
+@import "../../scss//mediaQueries.scss";
+
+.aboutMain{
+    margin-block-start: 32px;
+    margin-inline: 24px;
+    &__description{
+        text-align: justify;
+        text-justify: auto;
+    }
+    &__pictures{
+        width: 100%;
+        height: auto;  
+    }
+}
+
+@include tablet{
+    .aboutMain{
+        margin-inline: 50px;
+        
+    }
+}
+@include desktop{
+    .aboutMain{
+        margin-inline: calc(50% - 600px);
+        display: flex;
+        column-gap: 50px;  
+        &__pictures{
+            width: 600px;
+            height: 100%;
+            border-radius: 10px;  
+        } 
+    }
+}
+// @include big-desktop{
+//     .aboutMain{
+//         margin-right: 800px;
+//     }
+// }

@@ -1,0 +1,27 @@
+@import "../../scss/colors.scss";
+@import "../../scss/mediaQueries.scss";
+
+  
+  .hero {
+      position: relative;
+      min-height: 90px;
+      display: flex;
+      margin: 20px;
+      &__text{
+        font-size: 70px;
+        color: $Blue-green;
+        text-shadow: $Yellow-crayola 3px 3px 1px;
+    }
+  }
+
+  @include tablet{
+    .hero {
+      margin-left: 50px;
+    }
+  }
+  @include desktop{
+    .hero {
+      margin-left: 200px;
+    }
+  }
+

@@ -1,0 +1,29 @@
+@import "./scss/colors.scss";
+@import "~bootstrap/scss/bootstrap";
+*{
+  font-family: 'Roboto', sans-serif;
+
+}
+a{
+  text-decoration: none;
+  color: $Dark-purple;
+}
+h2{
+  color: $Blue-green;
+  font-weight: bold;
+}
+h3{
+  color: $Dark-Orange;
+  font-weight: bold;
+}
+hr{
+  border-top: 1px dashed red;
+
+}
+path {
+  pointer-events: all;
+}
+path:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+@import "../../scss/colors.scss";
+@import '../../scss/mediaQueries.scss';
+
+
+.blogs{
+    display: flex;
+    margin: 20px;
+    .card{
+      max-height: 255px;
+    }
+}
+
+@include tablet {
+  .blogs {
+    margin-left: 50px;
+    margin-right: 50px;
+    .card-columns{
+        column-count: 3;  
+    }
+    .card{
+      height: auto;
+    }
+  }
+}
+
+@include desktop {
+  .blogs {
+    margin-left: 200px;
+    margin-right: 200px;
+      .card-columns{
+        column-count: 4;  
+      }
+  }
+}

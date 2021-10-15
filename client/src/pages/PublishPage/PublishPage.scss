@@ -1,0 +1,13 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/colors.scss';
+.publishMain{
+    display: grid;
+    justify-content: center;
+    column-gap: 50px;
+    &-form{
+        @include mainFormDiv(600px);
+        textarea{
+           min-height: 300px;
+       }  
+    }
+}

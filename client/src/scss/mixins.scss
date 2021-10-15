@@ -1,0 +1,47 @@
+@mixin mainFormDiv($min-width){
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .mainForm{
+        margin-top: 20px;
+        // min-width: 400px;
+        min-width: $min-width;
+        display: flex;
+        flex-direction: column;
+
+       label{
+          margin: 10px 0; 
+       }
+
+       &-input{
+            margin: 10px;
+            padding: 10px;
+            background-color: $Floral-white;
+            border:none;
+        }
+
+        &-button{
+            margin-left: 0;
+            margin-top: 20px; 
+            cursor: pointer;
+            background-color: $Blue-green;
+            border:none;
+            color: $Floral-white;
+            border-radius: 5px;
+            padding: 10px;
+         }
+         &-button:disabled{
+             cursor:not-allowed;
+         }
+
+       
+    }
+   
+
+    .formTitle{
+        font-size: 50px;
+    }
+}

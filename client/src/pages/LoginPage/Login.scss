@@ -1,0 +1,14 @@
+@import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+
+.loginDiv{
+    @include mainFormDiv(400px);
+    margin-right: 5px;
+    .mainForm{
+        padding-left: 10px;
+        padding-right: 10px;
+        &-button{
+            margin: 10px;
+        }
+    }
+}

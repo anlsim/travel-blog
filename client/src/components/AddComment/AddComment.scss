@@ -1,0 +1,36 @@
+@import "../../scss/colors.scss";
+
+input, textarea{
+    margin: 10px 0;
+}
+.comment{
+    display: grid;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    &__name, &__text{
+        border-radius: 5px;
+        padding: 8px;
+        border: 2px solid $Blue-green;
+    }
+    &__text{
+        height: 200px;
+       
+    }
+
+    &__btn{
+        background-color: $Blue-green;
+        border: none;
+        color: $Floral-white;
+        padding: 6px;
+        width: 100%;
+        margin-left: 0;
+        border-radius: 5px;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    
+}

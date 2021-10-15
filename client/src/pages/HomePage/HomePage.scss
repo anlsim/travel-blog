@@ -1,0 +1,50 @@
+@import "../../scss/colors.scss";
+@import '../../scss/mediaQueries.scss';
+
+    .main-content{
+        margin:  5px;
+
+        &__map{
+            display: inline-block;
+            width: 98%;
+        }
+        &__updates{
+            display: inline-block;
+            width: 100%;
+        }
+        .card-columns{
+            column-count: 1;
+        }
+        .card{
+            max-height: 235px;
+        }
+        
+    }
+    .counterBar{
+        margin-top: 10px;
+    }
+    @include tablet{
+        .main-content{
+            margin:  20px;
+            .card{
+                margin-bottom: 10;
+            }
+        }   
+    }
+
+    @include desktop{
+        .main-content{
+            display: flex;
+            &__map{
+                width: 75%;
+            }
+            &__updates{
+                width: 25%;
+            }
+            .card-columns{
+                max-width: 600px;
+            }
+        }
+
+    }
+    
