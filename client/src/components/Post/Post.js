@@ -13,36 +13,52 @@ const Post = ({ match }) => {
     const[posts, setPosts] = useState([]);
     const[comments, setComments] = useState([]);
     const[photos, setphotos] = useState([]);
-   
-    useEffect(()=>{
-      
-        const fetchPost = async ()=> {
-            const res = await axios.get("/api/posts");
-            setPosts(res.data);
+    const fetchData = async () =>{
+        const postsApi = await axios.get("/api/posts");
+        const commentensApi = await axios.get('/api/comments')
+        const photosApi = await axios.get('/api/gallery')
+
+        axios.all([postsApi, commentensApi, photosApi]).then(axios.spread((...allData) =>{
+            const allPost = allData[0].data;
+            const allComments = allData[1].data;
+            const allPhotos = allData[2].data;
             setloading(false);
-        }
-        fetchPost();
+            setPosts(allPost)
+            setComments(allComments); 
+            setphotos(allPhotos); 
+            
+        }))
+ 
+    }
+    useEffect(()=>{
+        fetchData()
+        // const fetchPost = async ()=> {
+        //     const res = await axios.get("/api/posts");
+        //     setPosts(res.data);
+        //     setloading(false);
+        // }
+        // fetchPost();
         
     }, []);
 
 
-    useEffect(()=>{
-        const fetchComments = async ()=> {
-            const res = await axios.get("/api/comments");
-            setComments(res.data);
-        }
+    // useEffect(()=>{
+    //     const fetchComments = async ()=> {
+    //         const res = await axios.get("/api/comments");
+    //         setComments(res.data);
+    //     }
        
-        fetchComments();
+    //     fetchComments();
         
-    }, []);
+    // }, []);
 
-    useEffect(()=>{
-        const fetchPhotos = async ()=> {
-            const res = await axios.get("/api/gallery");
-            setphotos(res.data);   
-        }
-        fetchPhotos();
-    }, [])
+    // useEffect(()=>{
+    //     const fetchPhotos = async ()=> {
+    //         const res = await axios.get("/api/gallery");
+    //         setphotos(res.data);   
+    //     }
+    //     fetchPhotos();
+    // }, [])
 
     if(loading) return <h4>Loading post...</h4>
     window.scrollTo(0, 0);
