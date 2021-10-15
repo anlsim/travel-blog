@@ -25,40 +25,12 @@ const Post = ({ match }) => {
             setloading(false);
             setPosts(allPost)
             setComments(allComments); 
-            setphotos(allPhotos); 
-            
+            setphotos(allPhotos);  
         }))
- 
     }
     useEffect(()=>{
         fetchData()
-        // const fetchPost = async ()=> {
-        //     const res = await axios.get("/api/posts");
-        //     setPosts(res.data);
-        //     setloading(false);
-        // }
-        // fetchPost();
-        
     }, []);
-
-
-    // useEffect(()=>{
-    //     const fetchComments = async ()=> {
-    //         const res = await axios.get("/api/comments");
-    //         setComments(res.data);
-    //     }
-       
-    //     fetchComments();
-        
-    // }, []);
-
-    // useEffect(()=>{
-    //     const fetchPhotos = async ()=> {
-    //         const res = await axios.get("/api/gallery");
-    //         setphotos(res.data);   
-    //     }
-    //     fetchPhotos();
-    // }, [])
 
     if(loading) return <h4>Loading post...</h4>
     window.scrollTo(0, 0);
