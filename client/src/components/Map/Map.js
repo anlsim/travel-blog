@@ -26,8 +26,6 @@ export default function Map() {
   const circleColor = { color: '#221C35', weight: 10 }
   const cityIndex = cities.length-2;
   const lastCity = cities[cityIndex].location;
-  console.log(lastCity)
-
   const LOCATION = {
     lat: 37.9072,
     lng: -95.58

@@ -16,7 +16,6 @@ export default function HomePage() {
     }, [])
     
     const citiesList = posts.map(obj => obj.city);
-    console.log(citiesList)
     return (
         <>
             <div className='main-content'>
