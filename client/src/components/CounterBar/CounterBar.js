@@ -19,7 +19,7 @@ export default function CounterBar() {
        }, []);
        if(loading) return <h4>Loading bar...</h4>
 
-       const start = new Date(2021, 8, 7);
+       const start = new Date(2021, 9, 1);
      
        const today = new Date();
        const daysCounter  =  Math.ceil((today - start + 1) / 86400000);
@@ -38,10 +38,7 @@ export default function CounterBar() {
                      Cities Visited: 
                      <span> {cities.length-1}</span>
               </h1>
-              <h1 className="counterbar__text">
-                     Miles Driven: 
-                     <span> 4075</span>
-              </h1>
+
               
        
        </div>
