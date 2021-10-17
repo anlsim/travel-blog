@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import axios from "axios";
-import * as emailjs from 'emailjs-com';
 import './Register.scss';
 
 
@@ -40,9 +39,6 @@ export default function Register() {
         setErrorMessage("Sorry, there was a problem with your Registration.")
 
       }
-        emailjs.sendForm('gmail', 'template_test', e.target, 'userGoesHere')
-        e.target.reset();
-        setResult(true);
     }
     };
     
