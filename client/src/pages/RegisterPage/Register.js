@@ -76,7 +76,7 @@ export default function Register() {
                 placeholder="Email Address"
                 name="user_email"
                 required
-                onChange={e=>setEmail(e.target.value)}
+                onChange={e=>setEmail(e.target.value.toLowerCase())}
             />
             <input 
                  className="mainForm-input" 
