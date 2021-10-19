@@ -30,13 +30,13 @@ export default function Map() {
     lat: 37.9072,
     lng: -95.58
   };
-  const CENTER = window.screen.availWidth < 900 ?[lastCity[0], lastCity[1]]:[LOCATION.lat, LOCATION.lng];
+  const CENTER  = [lastCity[0], lastCity[1]];
 
 
   const mapSettings = {
       center: CENTER,
       defaultBaseMap: 'OpenStreetMap',
-      zoom: 4.5,
+      zoom: 6,
     };
   return (
     <div className="mapId">
