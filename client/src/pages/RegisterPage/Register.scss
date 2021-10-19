@@ -1,7 +1,6 @@
-@import '../../scss/colors.scss';
-@import '../../scss/mixins.scss';
+@import "../../scss/colors.scss";
+@import "../../scss/mixins.scss";
 
-.registerDiv{
-    @include mainFormDiv(400px);
-
+.registerDiv {
+  @include mainFormDiv(400px);
 }

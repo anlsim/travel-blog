@@ -1,20 +1,16 @@
-@import '../../scss/colors.scss';
-@import '../../scss/mixins.scss';
+@import "../../scss/colors.scss";
+@import "../../scss/mixins.scss";
 
 .settings {
-    @include mainFormDiv(400px);
-    .mainForm{
-        h3{
-            text-align: center;
-        }
-        padding-left: 10px;
-        padding-right: 10px;
-        &-button{
-            margin: 10px;
-        }
+  @include mainFormDiv(400px);
+  .mainForm {
+    h3 {
+      text-align: center;
+    }
+    padding-left: 10px;
+    padding-right: 10px;
+    &-button {
+      margin: 10px;
     }
   }
-  
-  
-  
- 
+}
