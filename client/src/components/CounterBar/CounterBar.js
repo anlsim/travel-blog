@@ -26,18 +26,18 @@ export default function CounterBar() {
        const cityIndex = cities.length-1;
        return(     
        <div className="counterbar">
-              <h1 className="counterbar__text">
+              <h2 className="counterbar__text">
                      Days on the road: 
                      <span> {daysCounter}</span>
-              </h1>
-              <h1 className="counterbar__text">
+              </h2>
+              <h2 className="counterbar__text">
                      Last City Visited: 
                      <span> {cities[cityIndex].name}, {cities[cityIndex].state}</span>
-              </h1>
-              <h1 className="counterbar__text">
+              </h2>
+              <h2 className="counterbar__text">
                      Cities Visited: 
                      <span> {cities.length-1}</span>
-              </h1>
+              </h2>
 
               
        
