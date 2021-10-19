@@ -1,17 +1,23 @@
 @mixin tablet {
-  @media screen and (min-width: 820px) {
+  @media screen and (min-width: 834px) {
+    @content;
+  }
+}
+@mixin small-desktop {
+  @media screen and (min-width: 1050px) {
     @content;
   }
 }
 
+
 @mixin desktop {
-  @media only screen and (min-width: 1300px) {
+  @media only screen and (min-width: 1200px) {
     @content;
   }
 }
 
 @mixin big-desktop {
-  @media only screen and (min-width: 1850px) {
+  @media only screen and (min-width: 1650px) {
     @content;
   }
 }

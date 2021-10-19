@@ -4,7 +4,7 @@
 .navBar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  // justify-content: flex-start;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   background: white;
   position: relative;
@@ -77,18 +77,43 @@
       left: 0;
       top: 0;
       display: grid;
-      grid-template-columns: repeat(6, auto);
-      grid-gap: 20px;
+      grid-template-columns: repeat(6, max-content);
+      grid-gap: 10px;
       padding-left: 0;
       &__links {
+        color: $Blue-green;
         font-size: 18px;
-        padding: 5px;
+        font-weight: bold;
+        padding: 10px;
         justify-self: center;
       }
     }
-
     &__settings {
       display: flex;
+    }
+  }
+}
+@include small-desktop {
+  .navBar {
+    &__menu {
+      grid-gap: 30px;
+    }
+    &__settings {
+      margin-inline-start: 20px;
+    }
+  }
+}
+@include desktop {
+  .navBar {
+    &__settings {
+      margin-inline-start: 170px;
+    }
+  }
+}
+@include big-desktop {
+  .navBar {
+    &__settings {
+      margin-inline-start: 550px;
     }
   }
 }
