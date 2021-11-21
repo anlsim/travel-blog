@@ -1,3 +1,4 @@
+const { ObjectId } = require("bson");
 const mongoose = require("mongoose");
 
 const CommentsSchema = new mongoose.Schema({
@@ -14,10 +15,9 @@ const CommentsSchema = new mongoose.Schema({
         type:String,
         required: true,
     },
-    replies: {
-        type: Array,
+    responseTo: {
+        type: String,
         required: false,
-        default: null,
     }
     },{timestamps: true} 
 );

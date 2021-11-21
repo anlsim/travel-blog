@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './AddComment.scss';
 import axios from "axios";
 
-const AddComment = ({post_Id}) => {
+const AddComment = ({post_Id, commentId}) => {
 
     const [userName, setUserName] = useState('');
     const [comment, setComment] = useState('');
@@ -13,6 +13,7 @@ const AddComment = ({post_Id}) => {
                 userName,
                 comment,
                 postId: post_Id,
+                responseTo: commentId,
         }
         try{
              await axios.post("/api/comments", newComment);
