@@ -14,6 +14,11 @@ const CommentsSchema = new mongoose.Schema({
         type:String,
         required: true,
     },
+    replies: {
+        type: Array,
+        required: false,
+        default: null,
+    }
     },{timestamps: true} 
 );
 
