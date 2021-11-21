@@ -2,7 +2,9 @@ import React from 'react'
 import './ReplyComment.scss'
 
 function ReplyComment() {
-  return <div></div>
+  return <div>
+    Reply Comment
+  </div>
 }
 
 export default ReplyComment
