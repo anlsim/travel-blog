@@ -23,14 +23,9 @@ function ReplyComment({comments, postId, parentCommentId}) {
   return (
     <div>
       {ChildCommentNumber > 0 && (
-        <p
-          style={{
-            fontSize: '14px',
-            margin: 0,
-            color: 'gray',
-          }}
+        <p className = "comment-btn"
           onClick={handleChange}>
-          View {ChildCommentNumber} more comment(s)
+          View {ChildCommentNumber} replies
         </p>
       )}
       {
@@ -38,7 +33,7 @@ function ReplyComment({comments, postId, parentCommentId}) {
       comments.map((c, key) => (
         <>
           {c.responseTo === parentCommentId && (
-            <div className='something'>
+            <div className='replyComments'>
               <Comment comment={c} />
               <ReplyComment
                 comments={comments}

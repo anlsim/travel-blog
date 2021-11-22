@@ -10,10 +10,10 @@ const CommentsList = ({ comments }) => (
 
       {comments.map((c, key) => (
         (!c.responseTo && 
-        <>
+        <div className="commentDiv">
           <Comment comment={c} key={key}/>
           <ReplyComment comments = {comments} postId = {comments.postId} parentCommentId = {c._id} key={key}/>
-        </>
+        </div>
         )
       ))}
     </div>

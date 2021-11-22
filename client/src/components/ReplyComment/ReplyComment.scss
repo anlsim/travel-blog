@@ -1,4 +1,14 @@
-.something {
-  background-color: aqua;
+@import "../../scss/colors.scss";
+.replyComments {
   margin-left: 50px;
+  border-left: 6px solid $Yellow-crayola;
+  margin-block: 20px;
+  padding-inline: 10px;
+}
+.comment-btn{
+    cursor: pointer;
+    font-size: '14px';
+    color: $Blue-green;
+    //position: absolute;
+  
 }
