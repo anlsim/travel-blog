@@ -1,23 +1,16 @@
 @import "../../scss/colors.scss";
 .commentDiv{
-  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  //border-top: 2px solid $Blue-green;
-  //border-left: 6px solid $Blue-green;
-  //border-radius: 10px;
   padding-inline: 10px;
   &__userInfo{
     display: flex;
-    //border-top: 2px solid $Blue-green;
     align-items: center;
     padding-top: 10px;
     margin-top: 20px;
     gap: 10px;
-
   }
   &__userName{
     font-weight: bold;
     font-size: 18px;
-    
     max-width: 900px;
   }
   &__date {
@@ -32,8 +25,6 @@
       max-width: 900px;
       text-align: justify;
       text-justify: auto;
-     
-      
   }
 
 }

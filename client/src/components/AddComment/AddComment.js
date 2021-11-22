@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import './AddComment.scss';
-import axios from "axios";
+import React, { useState, useContext } from 'react'
+import axios from "axios"
+import { Context } from "../../context/Contex"
+import './AddComment.scss'
 
 const AddComment = ({post_Id, commentId}) => {
-
+    const { user } = useContext(Context)
     const [userName, setUserName] = useState('');
     const [comment, setComment] = useState('');
    
     const handleComment = async (e) => {
         e.preventDefault();
         const newComment = {
-                userName,
+                userName: user.firstName + user.lastName,
                 comment,
                 postId: post_Id,
                 responseTo: commentId,
@@ -26,13 +27,7 @@ const AddComment = ({post_Id, commentId}) => {
 
     return (
         <div className="comment">
-            <h3>LEAVE A COMMENT</h3>
-            <input 
-                className="comment__name" 
-                type="text" 
-                onChange={e => setUserName(e.target.value)}  
-                placeholder="NAME"
-            />
+            <h3>{user.firstName.toUpperCase()} ADD A COMMENT</h3>
             <textarea  
                 className="comment__text"rows="4" 
                 cols="50" 
