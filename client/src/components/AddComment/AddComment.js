@@ -36,7 +36,7 @@ const AddComment = ({post_Id, commentId}) => {
             <button 
                 className="comment__btn" 
                 type="submit"
-                onClick={handleComment}>LEAVE COMMENT</button>
+                onClick={handleComment}>ADD COMMENT</button>
         </div>
     );
 }

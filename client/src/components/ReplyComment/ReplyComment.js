@@ -22,12 +22,17 @@ function ReplyComment({comments, postId, parentCommentId}) {
 
   return (
     <div>
-      {ChildCommentNumber > 0 && (
-        <p className = "comment-btn"
-          onClick={handleChange}>
-          View {ChildCommentNumber} replies
-        </p>
-      )}
+      {
+        ChildCommentNumber > 0 &&(
+          ChildCommentNumber === 1 ? 
+          (<p className = "comment-btn"onClick={handleChange}>
+              View {ChildCommentNumber} reply
+          </p> ) :
+          (<p className = "comment-btn"onClick={handleChange}>
+              View {ChildCommentNumber} replies
+          </p> )
+        )
+      }
       {
       OpenReplyComments &&
       comments.map((c, key) => (
