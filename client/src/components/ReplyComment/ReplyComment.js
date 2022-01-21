@@ -12,6 +12,7 @@ function ReplyComment({comments, postId, parentCommentId}) {
       if (comment.responseTo === parentCommentId) {
         commentNumber++
       }
+      return commentNumber
     })
     setChildCommentNumber(commentNumber)
   }, [comments, parentCommentId])

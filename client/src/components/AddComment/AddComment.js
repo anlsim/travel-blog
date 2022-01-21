@@ -5,7 +5,6 @@ import './AddComment.scss'
 
 const AddComment = ({post_Id, commentId}) => {
     const { user } = useContext(Context)
-    const [userName, setUserName] = useState('');
     const [comment, setComment] = useState('');
    
     const handleComment = async (e) => {

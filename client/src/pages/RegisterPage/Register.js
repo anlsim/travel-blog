@@ -37,6 +37,8 @@ export default function Register() {
         setError(true)
         setErrorMessage("Sorry, there was a problem with your Registration.")
       }
+      e.target.reset()
+      setResult(true)
     }
   }
 

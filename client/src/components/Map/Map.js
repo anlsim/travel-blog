@@ -26,10 +26,10 @@ export default function Map() {
   const circleColor = { color: '#221C35', weight: 10 }
   const cityIndex = cities.length-2;
   const lastCity = cities[cityIndex].location;
-  const LOCATION = {
-    lat: 37.9072,
-    lng: -95.58
-  };
+  // const LOCATION = {
+  //   lat: 37.9072,
+  //   lng: -95.58
+  // };
   const CENTER  = [lastCity[0], lastCity[1]];
 
 
