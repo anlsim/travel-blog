@@ -1,5 +1,5 @@
 import { useState } from "react"
-import * as emailjs from "emailjs-com"
+import emailjs from '@emailjs/browser';
 import "./Login.scss"
 
 export default function Register() {
