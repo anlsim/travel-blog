@@ -1,2 +1,1 @@
-# Travel Blog - React Project
-
+# Travel Blog - Full Stack MERN Project
