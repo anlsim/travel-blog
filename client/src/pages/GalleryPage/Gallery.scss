@@ -4,23 +4,33 @@
     .galleryContainer{
         margin: 20px;
         display: block;
-        .ReactGridGallery_tile{
-            max-width: 160px;
+        column-count: 1;
+        column-width: 100%;
+        padding: 0 12px;
+
+        &__thumbnail {
+            transition: all 350ms ease;
+            cursor: pointer; 
+            margin-bottom: 12px;
+        }
+        &__image {
+            width: 100%;
         }
     }
 
     @include tablet{
-        .galleryContainer{
+        .galleryContainer {
             margin-inline: 50px;
-            .ReactGridGallery_tile{
-                max-width: 600px;
-            }
+            column-count: 2;
+            column-width: 50%;
+            
         }
     }
     @include desktop{
-        .galleryContainer{
+        .galleryContainer {
             margin-left: 200px;
             margin-right: 200px;
-
+            column-count: 3;
+            column-width: 33%;
         }
     }
