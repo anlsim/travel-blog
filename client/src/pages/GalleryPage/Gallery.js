@@ -11,7 +11,7 @@ export default function GalleryPage() {
   const [loading, setloading] = useState(true)
   const [index, setIndex] = useState(-1);
 
-  const handleClick = (index, item) => setIndex(index)
+  const handleClick = (index) => setIndex(index)
 
   useEffect(() => {
     const fetchPost = async () => {
